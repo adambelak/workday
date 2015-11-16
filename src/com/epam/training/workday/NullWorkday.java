@@ -18,7 +18,7 @@ class NullWorkday implements Workday {
 	}
 
 	private static class NullWorkdayHolder {
-		public static final NullWorkday INSTANCE = new NullWorkday();
+		private static final NullWorkday INSTANCE = new NullWorkday();
 	}
 
 	public static NullWorkday getInstance() {

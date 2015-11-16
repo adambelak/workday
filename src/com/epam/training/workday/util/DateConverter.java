@@ -25,4 +25,7 @@ public class DateConverter {
 		return (date == null) ? null : date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 	}
 
+	private DateConverter() {
+	}
+
 }

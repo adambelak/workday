@@ -18,4 +18,7 @@ public final class WorkdayConstants {
 	public static final String SHORT_ERROR_MESSAGE = "Invalid.";
 	public static final String INVALID_DATE_FORMAT = "Invalid dateformat. Please use the \"yyyy-MM-dd\" pattern. for example: 2015-01-02";
 
+	private WorkdayConstants() {
+	}
+
 }

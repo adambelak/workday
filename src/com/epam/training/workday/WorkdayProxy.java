@@ -29,7 +29,7 @@ public class WorkdayProxy implements Workday {
 	}
 
 	private static class WorkdayProxyHolder {
-		public static final WorkdayProxy INSTANCE = new WorkdayProxy();
+		private static final WorkdayProxy INSTANCE = new WorkdayProxy();
 	}
 
 	public static WorkdayProxy getInstance() {
