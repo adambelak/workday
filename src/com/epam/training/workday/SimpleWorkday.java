@@ -55,16 +55,11 @@ class SimpleWorkday implements Workday {
 	}
 
 	private boolean isVacation(LocalDate date) {
-		try {
-			// @formatter:off
-			vacations.stream()
-				.filter(vacation -> vacation.getDayOfYear() == date.getDayOfYear())
-				.findFirst().get();
-			// @formatter:on
-			return true;
-		} catch (NoSuchElementException ex) {
-			return false;
-		}
+		// @formatter:off
+		return vacations.stream()
+			.filter(vacation -> vacation.getDayOfYear() == date.getDayOfYear())
+			.findFirst().isPresent();
+		// @formatter:on
 	}
 
 	private void init() throws Exception {
